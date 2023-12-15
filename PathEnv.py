@@ -56,7 +56,7 @@ class PathEnv(gym.Env):
         self.ee_path = [[x[0] * 83 + 160, x[1] * 40 + 300] for x in np.load('ee_path.npy')]
 
         # Default starting angles
-        self.starting_angles = (-65.0, 19.9)  # (-60, 20)
+        self.starting_angles = (-65.0, 19.9)
 
         # Set to the start of the path, always keep track of current state.
         self.current_position_index = 0
@@ -87,7 +87,7 @@ class PathEnv(gym.Env):
 
         # This turns our continuous action space into a an array of a set of discrete actions.
         # [:num_subunits_sqrt] Add only if testing one arm
-        self.discretized_actions = self.discretize_box_space()
+        self.discretized_actions = self.discretize_box_space()#[:50]
 
         self.observation_space_n = 100  # Number of observations will be number of places on the path.
         self.action_space_n = len(self.discretized_actions)
@@ -96,7 +96,7 @@ class PathEnv(gym.Env):
         pygame.init()
 
     # Discretify the gradient into n amount of buckets
-    def discretize_box_space(self, num_subunits_sqrt=8):
+    def discretize_box_space(self, num_subunits_sqrt=5):
         space = self.action_space
         low = space.low
         high = space.high
@@ -128,16 +128,17 @@ class PathEnv(gym.Env):
         arm1_angle, arm2_angle = new_joint_angles
         root_x, root_y = self.base_path[current_position]  # current root position based off of index of base_path
 
+        # Get position of end-effector
         new_ee_x = root_x + ARM_LENGTH_1 * math.cos(math.radians(arm1_angle)) \
                    + ARM_LENGTH_2 * math.cos(math.radians(arm1_angle + arm2_angle))
 
         new_ee_y = root_y + ARM_LENGTH_1 * math.sin(math.radians(arm1_angle)) \
                    + ARM_LENGTH_2 * math.sin(math.radians(arm1_angle + arm2_angle))
         """
-        This reward function is the negative distance from the target point.  
+        This reward function is the negative distance from the target point.
         """
-        reward = -math.hypot((new_ee_x - self.ee_path[self.current_pos[0]][0]),
-                             (new_ee_y - self.ee_path[self.current_pos[0]][1]))
+        reward = -math.hypot(new_ee_y - self.ee_path[self.current_pos[0]][1],
+                             new_ee_x - self.ee_path[self.current_pos[0]][0])
         return reward
 
     def step(self, action):
@@ -225,12 +226,6 @@ class PathEnv(gym.Env):
             joint1_pos[0] + ARM_LENGTH_2 * math.cos(math.radians(q_1 + q_2)),
             joint1_pos[1] + ARM_LENGTH_2 * math.sin(math.radians(q_1 + q_2))
         ]
-        # ---#
-        """joint3_pos = {
-            joint2_pos[0] + ARM_LENGTH_3 * math.cos(math.radians(q_1 + q_2 + q_3)),
-            joint2_pos[1] + ARM_LENGTH_3 * math.sin(math.radians(q_1 + q_2 + q_3))
-        }"""
-        # --#
 
         # This if statement prevents floating point errors which cause domain errors. ex. 1.00001 !< 1
         if (((joint2_pos[0] - ROOT_POS[0]) ** 2 + (
@@ -308,20 +303,22 @@ class PathEnv(gym.Env):
 
         error = error / len(self.lines)
 
-        text_surface2 = font.render(f"Episode: {e}", True, (0, 0, 0))  # Black color (0, 0, 0)
-        text_surface3 = font.render(f"Iteration: {i}", True, (0, 0, 0))  # Black color (0, 0, 0)
-        text_surface4 = font.render(f"Reward: {r}", True, (0, 0, 0))  # Black color (0, 0, 0)
+        ep_surface = font.render(f"Episode: {e}", True, (0, 0, 0))  # Black color (0, 0, 0)
+        it_surface = font.render(f"Iteration: {i}", True, (0, 0, 0))  # Black color (0, 0, 0)
+        rw_surface = font.render(f"Reward: {r}", True, (0, 0, 0))  # Black color (0, 0, 0)
 
-        text_rect2 = text_surface2.get_rect()
-        text_rect2.topleft = (100, 120)
-        text_rect3 = text_surface3.get_rect()
-        text_rect3.topleft = (100, 175)
-        text_rect4 = text_surface2.get_rect()
-        text_rect4.topleft = (100, 150)
+        ep_text = ep_surface.get_rect()
+        ep_text.topleft = (100, 120)
 
-        screen.blit(text_surface2, text_rect2)
-        screen.blit(text_surface3, text_rect3)
-        screen.blit(text_surface4, text_rect4)
+        it_text = it_surface.get_rect()
+        it_text.topleft = (100, 175)
+
+        rw_text = rw_surface.get_rect()
+        rw_text.topleft = (100, 150)
+
+        screen.blit(ep_surface, ep_text)
+        screen.blit(it_surface, it_text)
+        screen.blit(rw_surface, rw_text)
 
         text_surface = font.render(f"Average Error: {error:2f}", True, (0, 0, 0))  # Black color (0, 0, 0)
         text_rect = text_surface.get_rect()
@@ -332,6 +329,3 @@ class PathEnv(gym.Env):
             pygame.draw.line(screen, (0, 0, 0), self.lines[i], self.lines[i + 1], 2)
 
         pygame.display.flip()
-
-        # clock.tick(60)
-        # pygame.display.update()  # Update the display
