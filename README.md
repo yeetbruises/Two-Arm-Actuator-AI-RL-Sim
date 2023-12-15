@@ -11,7 +11,7 @@ This project utilizes methods such as inverse kinematics, and
 Q-Learning and SARSA to develop a two arm actuator with the goal of successfully tracing out a target path
 in a virtual space.
 
-
+ 
 <h2> Documentation </h2>
 <hr/>
 
