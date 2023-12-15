@@ -31,7 +31,9 @@ Here's an explanation of the files:
 - TestRunQ.py - This is the Q-Learning algorithm which tests and renders the program.
 - TestRunSARSA.py - This is a modified version of TestRunQ.py which implements SARSA. 
 
-There is a section of code toward the bottom of TestRunQ.py and TestRunSARSA.py which can 
+<b> Note: </b>
+There is a commented section of code near the bottom of TestRunQ.py and TestRunSARSA.py
+which allow for rendering the simulation in pygame. There is also a section of code toward the bottom of TestRunQ.py and TestRunSARSA.py which can 
 be uncommented to see the statstics of a run after a certain episode. 
 
 An example of a graph that can be plotted using the in-built plotter:
