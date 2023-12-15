@@ -4,7 +4,7 @@
 <h2> About </h2>
 <hr/>
 
-<img src="https://www.researchgate.net/profile/Ashraf-Elfasakhany/publication/268437501/figure/fig11/AS:668635869745155@1536426622280/Free-body-diagram-of-the-robot-arm.ppm">
+<img src="https://media.discordapp.net/attachments/782728868179607603/1185070191424581702/Screenshot_2023-12-14_at_11.05.47_PM.png?ex=658e459f&is=657bd09f&hm=5c407973395e83d203756f0da9ca4e6ab0db2b61973098f012c0086745cfa5a4&=&format=webp&quality=lossless&width=1344&height=960">
 Image taken from <a href="https://www.researchgate.net/figure/Free-body-diagram-of-the-robot-arm_fig11_268437501"> researchgate.net. </a>
 
 This project utilizes methods such as inverse kinematics, and 
@@ -34,8 +34,6 @@ Here's an explanation of the files:
 There is a section of code toward the bottom of TestRunQ.py and TestRunSARSA.py which can 
 be uncommented to see the statstics of a run after a certain episode. 
 
-Examples of graphs that can be plotted using the in-built plotter:
+An example of a graph that can be plotted using the in-built plotter:
 
 <img src="https://media.discordapp.net/attachments/782728868179607603/1185008345950715987/Screenshot_2023-12-14_at_6.59.47_PM.png?ex=658e0c06&is=657b9706&hm=fd144fe21fcb936e009ff14f52b05f9af78c63cc65441f11c438e589cb393078&=&format=webp&quality=lossless&width=1370&height=1028">
-<img src="https://media.discordapp.net/attachments/782728868179607603/1185012626175049829/Screenshot_2023-12-14_at_7.16.51_PM.png?ex=658e1002&is=657b9b02&hm=6f5aba424154d449af8b2d65a242e577fe8301e576e6d6ef24e37b0099162d92&=&format=webp&quality=lossless&width=1370&height=1028">
-<img src="https://media.discordapp.net/attachments/782728868179607603/1185015687534620713/Screenshot_2023-12-14_at_7.28.35_PM.png?ex=658e12dc&is=657b9ddc&hm=f5e0189d71c26f7e55ba4ae6b8c813622460bea619c6ed648521f8220bf69cb2&=&format=webp&quality=lossless&width=1378&height=1028">
