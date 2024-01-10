@@ -129,7 +129,7 @@ This project tested both Q-Learning and SARSA, and those details will be discuss
 
 Here's the result of a 1000 episode run, the line stabilizes as the episodes increase.
 
-https://media.discordapp.net/attachments/782728868179607603/1194433214417227776/Screenshot_2024-01-09_at_7.09.30_PM.png?ex=65b0559d&is=659de09d&hm=e755146e0a03b07847e3f89ebfde078248a8498815bbf4e083d46206750212c5&=&format=webp&quality=lossless&width=1376&height=1028
+<img src="https://media.discordapp.net/attachments/782728868179607603/1194433214417227776/Screenshot_2024-01-09_at_7.09.30_PM.png?ex=65b0559d&is=659de09d&hm=e755146e0a03b07847e3f89ebfde078248a8498815bbf4e083d46206750212c5&=&format=webp&quality=lossless&width=1376&height=1028">
 
 
 <h2> Demonstration </h2>
