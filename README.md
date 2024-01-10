@@ -1,8 +1,21 @@
 <h2><b>Simulation of a Two Arm Actuator Using Reinforcement Learning</b></h2>
 
+##### Table of Contents
+[About](#-about-)
+
+[Running It](#-running-it-)
+
+[Background](#-background-)
+
+[Equations](#-equations-)
+
+[Approach](#-approach-and-challenges-)
+
+[Findings](#-findings-)
+
+[Demonstration](#-demonstration-)
 
 <h2> About </h2>
-<hr/>
 
 <img src="https://media.discordapp.net/attachments/782728868179607603/1185070191424581702/Screenshot_2023-12-14_at_11.05.47_PM.png?ex=658e459f&is=657bd09f&hm=5c407973395e83d203756f0da9ca4e6ab0db2b61973098f012c0086745cfa5a4&=&format=webp&quality=lossless&width=1344&height=960">
 Image taken from <a href="https://www.researchgate.net/figure/Free-body-diagram-of-the-robot-arm_fig11_268437501"> researchgate.net. </a>
@@ -17,7 +30,6 @@ This project utilizes methods from the paper such as inverse kinematic equations
 Q-Learning formulas to recreate a more bare-bones version of what was presented in the paper.
 
 <h2> Running It </h2>
-<hr/>
 
 To run my program you will need to install the required libraries including Gym. On installing Gym,
 place the PathEvn file into the `python3.11 > site-packages > gym > envs > classic_control` folder. 
@@ -38,8 +50,8 @@ Here's an explanation of the files:
 Note: There is a commented section of code near the bottom of TestRunQ.py and TestRunSARSA.py which allow for rendering the simulation in pygame. There is also a section of code toward the bottom of TestRunQ.py and TestRunSARSA.py which can be uncommented to see the statstics of a run after a certain episode.
 
 
-<h2> The Stack </h2>
-<hr/>
+<h2> Background </h2>
+
 The main library used to enable reinforcement learning was OpenAI's Gym. This 
 allowed for a custom environment to be created and used on top of existing libraries in Gym
 to create a custom reinforcement learning project. 
@@ -59,7 +71,7 @@ The process of sorting out where those functions belonged also took until now to
 
 
 <h2> Equations </h2>
-<hr/>
+
 <img src="https://cdn.discordapp.com/attachments/782728868179607603/1184743438948765707/Screenshot_2023-12-14_at_1.27.08_AM.png?ex=658d154f&is=657aa04f&hm=8a3b4f60a4be43b7e4b1fe2d887bbf043d7c3dcee1c39914363a08ed2f170643&"> 
 
 These equations taken from the paper listed above, derive the inverse kinematics of the 
@@ -86,7 +98,6 @@ It learns the value of the policy it is currently using. This means that SARSA e
 the agent would actually take in the next state.
 
 <h2> Approach and Challenges </h2>
-<hr/>
 
 Delving into reinforcement learning was quite the learning curve. OpenAI Gym stood out as the most approachable library 
 for me to grasp, making it the natural choice to start with. Creating a custom environment, though, turned out to be a 
@@ -115,7 +126,6 @@ This project tested both Q-Learning and SARSA, and those details will be discuss
 
 
 <h2> Findings </h2>
-<hr/>
 
 This program implemented a Q-Learning and a SARSA learning algorithm.
 The results of the Q learning algorithm yielded an average reward across 1000 episodes of 
@@ -127,6 +137,7 @@ episodes in SARSA mode. This time the average reward was lowered to <b>-10.872.<
 <img src="https://media.discordapp.net/attachments/782728868179607603/1185012626175049829/Screenshot_2023-12-14_at_7.16.51_PM.png?ex=658e1002&is=657b9b02&hm=6f5aba424154d449af8b2d65a242e577fe8301e576e6d6ef24e37b0099162d92&=&format=webp&quality=lossless&width=1370&height=1028">
 <img src="https://media.discordapp.net/attachments/782728868179607603/1185015687534620713/Screenshot_2023-12-14_at_7.28.35_PM.png?ex=658e12dc&is=657b9ddc&hm=f5e0189d71c26f7e55ba4ae6b8c813622460bea619c6ed648521f8220bf69cb2&=&format=webp&quality=lossless&width=1378&height=1028">
 
+<h2> Demonstration </h2>
 
 https://github.com/yeetbruises/Two-Arm-Actuator-AI-RL-Sim/assets/61666396/bf462356-c3a3-4124-9026-32a9a60f53e1
 
