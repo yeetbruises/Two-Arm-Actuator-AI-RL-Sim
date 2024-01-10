@@ -127,15 +127,10 @@ This project tested both Q-Learning and SARSA, and those details will be discuss
 
 <h2> Findings </h2>
 
-This program implemented a Q-Learning and a SARSA learning algorithm.
-The results of the Q learning algorithm yielded an average reward across 1000 episodes of 
-<b> -11.034.</b> The SARSA run across 1000 episodes yielded a reward of <b>-10.940.</b> This is hard to see visually
-but it does represent at least a small improvement over Q learning. The last photo shows a run over 5000
-episodes in SARSA mode. This time the average reward was lowered to <b>-10.872.</b>
+Here's the result of a 1000 episode run, the line stabilizes as the episodes increase.
 
-<img src="https://media.discordapp.net/attachments/782728868179607603/1185008345950715987/Screenshot_2023-12-14_at_6.59.47_PM.png?ex=658e0c06&is=657b9706&hm=fd144fe21fcb936e009ff14f52b05f9af78c63cc65441f11c438e589cb393078&=&format=webp&quality=lossless&width=1370&height=1028">
-<img src="https://media.discordapp.net/attachments/782728868179607603/1185012626175049829/Screenshot_2023-12-14_at_7.16.51_PM.png?ex=658e1002&is=657b9b02&hm=6f5aba424154d449af8b2d65a242e577fe8301e576e6d6ef24e37b0099162d92&=&format=webp&quality=lossless&width=1370&height=1028">
-<img src="https://media.discordapp.net/attachments/782728868179607603/1185015687534620713/Screenshot_2023-12-14_at_7.28.35_PM.png?ex=658e12dc&is=657b9ddc&hm=f5e0189d71c26f7e55ba4ae6b8c813622460bea619c6ed648521f8220bf69cb2&=&format=webp&quality=lossless&width=1378&height=1028">
+https://media.discordapp.net/attachments/782728868179607603/1194433214417227776/Screenshot_2024-01-09_at_7.09.30_PM.png?ex=65b0559d&is=659de09d&hm=e755146e0a03b07847e3f89ebfde078248a8498815bbf4e083d46206750212c5&=&format=webp&quality=lossless&width=1376&height=1028
+
 
 <h2> Demonstration </h2>
 
