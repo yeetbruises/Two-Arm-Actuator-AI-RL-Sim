@@ -20,6 +20,8 @@
 <img src="https://media.discordapp.net/attachments/782728868179607603/1185070191424581702/Screenshot_2023-12-14_at_11.05.47_PM.png?ex=658e459f&is=657bd09f&hm=5c407973395e83d203756f0da9ca4e6ab0db2b61973098f012c0086745cfa5a4&=&format=webp&quality=lossless&width=1344&height=960">
 Image taken from <a href="https://www.researchgate.net/figure/Free-body-diagram-of-the-robot-arm_fig11_268437501"> researchgate.net. </a>
 
+**This was a final project submission for the Machine Learning class at Clemson University. I got permission from Dr. Razi to publish it here.**
+
 The purpose of this project is to recreate a model seen in the paper <b>"Actuator Trajectory Planning for UAVs with
 Overhead Manipulator using Reinforcement Learning" </b> which was written by Hazim Alzorgan, Abolfazl Razi and Ata Jahangir Moshayed.
 The paper describes an application of reinforcement learning on a virtual drone, where various kinematics are taken into account
