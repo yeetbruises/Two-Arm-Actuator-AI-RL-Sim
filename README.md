@@ -17,7 +17,7 @@
 
 <h2> About </h2>
 
-<img src="https://media.discordapp.net/attachments/782728868179607603/1185070191424581702/Screenshot_2023-12-14_at_11.05.47_PM.png?ex=658e459f&is=657bd09f&hm=5c407973395e83d203756f0da9ca4e6ab0db2b61973098f012c0086745cfa5a4&=&format=webp&quality=lossless&width=1344&height=960">
+![The-two-link-robot-arm-actuated-by-pneumatic-muscles](https://github.com/user-attachments/assets/5bd564c7-ee1e-47eb-b3a8-00e3ebcce0e1)
 Image taken from <a href="https://www.researchgate.net/figure/Free-body-diagram-of-the-robot-arm_fig11_268437501"> researchgate.net. </a>
 
 **This was a final project submission for the Machine Learning class at Clemson University. I got permission from Dr. Razi to publish it here.**
@@ -131,7 +131,7 @@ This project tested both Q-Learning and SARSA, and those details will be discuss
 
 Here's the result of a 1000 episode run, the line stabilizes as the episodes increase.
 
-<img src="https://media.discordapp.net/attachments/782728868179607603/1194433214417227776/Screenshot_2024-01-09_at_7.09.30_PM.png?ex=65b0559d&is=659de09d&hm=e755146e0a03b07847e3f89ebfde078248a8498815bbf4e083d46206750212c5&=&format=webp&quality=lossless&width=1376&height=1028">
+<img width="688" alt="Screenshot 2024-10-15 at 3 10 41 PM" src="https://github.com/user-attachments/assets/7a5101a5-2a36-4b4e-b279-eed90c9108f1">
 
 
 <h2> Demonstration </h2>
