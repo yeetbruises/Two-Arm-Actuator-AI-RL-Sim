@@ -1,4 +1,4 @@
-<h2><b>Simulation of a Two Arm Actuator Using Reinforcement Learning</b></h2>
+<h2><b>Training a Two Arm Actuator Using Reinforcement Learning</b></h2>
 
 ##### Table of Contents
 [About](#-about-)
